@@ -236,14 +236,14 @@ export default {
       switch (true) {
         case typeof this.source === 'string':
           // No resource search with no input
-          if (!this.display || this.display.length < 1) {
+          if (!this.display || this.display.length < 0) {
             return
           }
 
           return this.resourceSearch(this.source + this.display)
         case typeof this.source === 'function':
           // No resource search with no input
-          if (!this.display || this.display.length < 1) {
+          if (!this.display || this.display.length < 0) {
             return
           }
           return this.resourceSearch(this.source(this.display))
